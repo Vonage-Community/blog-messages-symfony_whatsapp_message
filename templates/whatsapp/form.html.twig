@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Send WhatsApp Message{% endblock %}
+
+{% block body %}
+<h1>Send WhatsApp Message</h1>
+
+{% if sent == true %}
+    <p>Message sent successfully.</p>
+{% endif %}
+
+<form action="{{ path('app_whatsapp_sendMessage') }}" method="post">
+    <div>
+        <label for="to">Number</label>
+        <input type="text" id="to" name="to" required>
+    </div>
+    <div>
+        <label for="message">Message</label>
+        <input type="text" id="message" name="message" required>
+    </div>
+    <button type="submit">Send</button>
+    <input type="hidden" name="_token" value="{{ csrf_token('send_whatsapp') }}">
+</form>
+{% endblock %}
