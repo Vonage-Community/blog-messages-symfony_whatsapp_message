@@ -17,7 +17,7 @@
         "symfony/runtime": "7.3.*",
         "symfony/security-csrf": "7.3.*",
         "symfony/twig-bundle": "7.3.*",
-        "symfony/yaml": "7.3.*",
+        "symfony/yaml": "7.4.*",
         "vonage/client-core": "^4.11"
     },
     "config": {
